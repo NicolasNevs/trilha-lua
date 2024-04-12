@@ -34,19 +34,23 @@ Habilidades
 os.execute("chcp 65001")
 
 -- Criatura
-local monsterName = "CREEPER"
-local description = "Um monstro furtivo com um temperamento explosivo."
-local emoji = "💥"
-local sound = "Tssssss"
+local monsterName = "MURLOC"
+local description = "Um monstrinho peculiar e muito simpático."
+local emoji = "🐟"
+local sound = "Mrglwglwlg!"
 local favoriteTime = "Noturno"
-local item = "Pólvora"
+local item = "Escamas Gosmentas"
 
 -- Atributos
-local attackAttribute = 10
-local defenseAttribute = 1
-local lifeAttribute = 5
+local attackAttribute = 8
+local defenseAttribute = 4
+local lifeAttribute = 7
 local speedAttribute = 7
-local inteligenceAttribute = 2
+local inteligenceAttribute = 4
+local sympathyAttribute = 10
+
+--Sobre Monstro
+local about = "Murlocs (conhecidos como gmmmlmrmrgmg ou Mmmurlok em sua língua) são uma raça humanoide bípede e anfíbia que reside principalmente ao longo das costas, margens de lagos e leitos de rios."
 
 -- função que recebe um atributo e nos retorna uma barra de progresso em string / texto
 local function getProgressBar(attribute)
@@ -65,10 +69,13 @@ local function getProgressBar(attribute)
 end
 
 -- Cartão
-print("===================================================")
+local cardLimit <const> = "==================================================="
+
+print(cardLimit)
 print("| ")
 print("| " .. monsterName)
 print("| " .. description)
+print("| " .. about)
 print("| ")
 print("| Item: " .. item)
 print("| Som: " .. sound)
@@ -81,5 +88,6 @@ print("|    Defesa:       " .. getProgressBar(defenseAttribute))
 print("|    Vida:         " .. getProgressBar(lifeAttribute))
 print("|    Velocidade:   " .. getProgressBar(speedAttribute))
 print("|    Inteligência: " .. getProgressBar(inteligenceAttribute))
+print("|    Simpatia:     " .. getProgressBar(sympathyAttribute))
 print("| ")
-print("===================================================")
+print(cardLimit)
